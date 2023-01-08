@@ -1,6 +1,6 @@
 {
   "name": "nyaapi-http-client",
-  "version": "0.0.1",
+  "version": "0.0.1.1",
   "description": "nyaa.si http client [unofficial]",
   "main": "dist/index.js",
   "author": "Raul Max <raulmax319@gmail.com>",
