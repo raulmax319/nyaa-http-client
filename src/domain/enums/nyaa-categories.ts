@@ -3,8 +3,8 @@ export enum NyaaCategories {
 }
 
 export enum NyaaAnimeCategories {
-  AllAnime = '1_0',
-  AnimeEnglish = '1_2',
-  AnimeNonEnglish = '1_3',
-  AnimeRaw = '1_4',
+  All = '1_0',
+  English = '1_2',
+  NonEnglish = '1_3',
+  Raw = '1_4',
 }
