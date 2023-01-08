@@ -2,7 +2,7 @@
   "name": "nyaapi-http-client",
   "version": "0.0.1",
   "description": "nyaa.si http client [unofficial]",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Raul Max <raulmax319@gmail.com>",
   "license": "MIT",
   "scripts": {
