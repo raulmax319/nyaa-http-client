@@ -1,5 +1,5 @@
 {
-  "name": "nyaa-si-http-client",
+  "name": "nyaapi-http-client",
   "version": "0.0.1",
   "description": "nyaa.si http client [unofficial]",
   "main": "index.js",
