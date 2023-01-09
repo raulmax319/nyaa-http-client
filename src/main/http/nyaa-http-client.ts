@@ -14,9 +14,11 @@ export class NyaaHttpClient implements NyaaSearch {
 
   async search(params: SearchParams): Promise<Array<NyaaModel>> {
     const queryString = `&q=${params.query}`;
+    const filterString = `&f=${params.filter}`;
+    const categoryString = `&c=${params.category}`;
 
     const result = await this.httpClient.get<string>({
-      url: `/?page=rss${queryString}`,
+      url: `/?page=rss${queryString}${filterString}${categoryString}`,
     });
 
     switch (result.statusCode) {
