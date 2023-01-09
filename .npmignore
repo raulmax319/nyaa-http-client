@@ -1,0 +1,4 @@
+node_modules/
+.lintstagedrc
+README.md
+.commitlintrc
