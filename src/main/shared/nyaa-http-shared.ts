@@ -7,7 +7,7 @@ import { NyaaService } from 'main/service';
 export class NyaaSharedFramework {
   private readonly service: NyaaService;
 
-  constructor({ baseURL, timeout = 25, maxRedirects = 5, proxy = undefined }: HttpConfigParams) {
+  constructor({ baseURL, timeout = 25000, maxRedirects = 5, proxy = undefined }: HttpConfigParams) {
     this.service = makeNyaaService({ baseURL, timeout, maxRedirects, proxy });
   }
 
