@@ -16,6 +16,9 @@ export async function convertToNyaaModel(xmlResult: string): Promise<Array<NyaaM
     size: item['nyaa:size'][0],
     trusted: item['nyaa:trusted'][0],
     remake: item['nyaa:remake'][0],
-    magneticUri: makeMagneticUri(item['nyaa:infoHash'][0]),
+    magneticUri: makeMagneticUri({
+      hash: item['nyaa:infoHash'][0],
+      nameEncoded: encodeURIComponent(item.title[0]),
+    }),
   }));
 }
