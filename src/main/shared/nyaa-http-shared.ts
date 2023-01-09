@@ -7,8 +7,8 @@ import { NyaaService } from 'main/service';
 export class NyaaSharedFramework {
   private readonly service: NyaaService;
 
-  constructor(config: HttpConfigParams) {
-    this.service = makeNyaaService(config);
+  constructor({ baseURL, timeout = 25, maxRedirects = 5, proxy = undefined }: HttpConfigParams) {
+    this.service = makeNyaaService({ baseURL, timeout, maxRedirects, proxy });
   }
 
   public async findAnime(
