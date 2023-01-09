@@ -12,7 +12,7 @@ export type ProxyConfig = {
 
 export type HttpConfigParams = {
   baseURL: string;
-  timeout: number;
-  maxRedirects: number;
+  timeout?: number;
+  maxRedirects?: number;
   proxy?: ProxyConfig;
 };
