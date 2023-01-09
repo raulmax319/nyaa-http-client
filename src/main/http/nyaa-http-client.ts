@@ -2,15 +2,10 @@ import { HttpGet, HttpStatusCode } from 'data/protocols/http';
 import { Unexpected } from 'domain/errors';
 import { NyaaModel } from 'domain/models';
 import { NyaaSearch, SearchParams } from 'domain/usecases';
-import { AxiosClient } from 'infra/http';
 import { convertToNyaaModel } from 'main/utils';
 
 export class NyaaHttpClient implements NyaaSearch {
-  private readonly httpClient: HttpGet;
-
-  constructor() {
-    this.httpClient = new AxiosClient();
-  }
+  constructor(private readonly httpClient: HttpGet) {}
 
   async search(params: SearchParams): Promise<Array<NyaaModel>> {
     const queryString = `&q=${params.query}`;

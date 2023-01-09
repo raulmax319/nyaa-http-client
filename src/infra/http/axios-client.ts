@@ -1,12 +1,18 @@
 import axios, { AxiosInstance } from 'axios';
-import { HttpGet, HttpGetParams, HttpResponse } from 'data/protocols/http';
+import { HttpConfigParams, HttpGet, HttpGetParams, HttpResponse } from 'data/protocols/http';
 
 export class AxiosClient implements HttpGet {
   private api: AxiosInstance;
 
-  constructor() {
+  constructor(private readonly config: HttpConfigParams) {
     this.api = axios.create({
-      baseURL: process.env.BASE_URL ?? 'https://nyaa.si',
+      baseURL: config.baseURL,
+      timeout: config.timeout,
+      maxRedirects: config.maxRedirects,
+      proxy: config.proxy || false,
+      validateStatus(status) {
+        return status === 200;
+      },
     });
   }
 
