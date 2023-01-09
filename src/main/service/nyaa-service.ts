@@ -7,8 +7,8 @@ export class NyaaService {
 
   public async searchAnime(
     name: string,
-    category?: NyaaAnimeCategories,
-    filter?: NyaaFilters,
+    category: NyaaAnimeCategories = NyaaAnimeCategories.All,
+    filter: NyaaFilters = NyaaFilters.NoFilter,
   ): Promise<Array<NyaaModel>> {
     return await this.client.search({
       query: name,
