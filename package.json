@@ -1,7 +1,7 @@
 {
   "name": "nyaa-http-client",
   "private": true,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "nyaa.si http client [unofficial]",
   "main": "dist/index.js",
   "author": "Raul Max <raulmax319@gmail.com>",
