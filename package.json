@@ -10,7 +10,7 @@
     "start": "node dist",
     "build": "./node_modules/typescript/bin/tsc -p tsconfig.json",
     "build:paths": "npx tscpaths -p tsconfig.json -s ./src -o ./dist",
-    "build:clean": "npm run clean && yarn build && yarn build:paths",
+    "build:clean": "npm run clean && npm run build && npm run build:paths",
     "clean": "rm -rf dist",
     "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./src",
     "lint": "eslint src/**",
