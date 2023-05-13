@@ -1,5 +1,5 @@
 {
-  "name": "nyaapi-http-client",
+  "name": "nyaa-http-client",
   "private": true,
   "version": "0.0.4",
   "description": "nyaa.si http client [unofficial]",
