@@ -13,7 +13,7 @@ export class NyaaSharedFramework {
 
   public async findAnime(
     name: string,
-    category: NyaaAnimeCategories = NyaaAnimeCategories.All,
+    category: NyaaAnimeCategories = NyaaAnimeCategories.all,
     filter: NyaaFilters = NyaaFilters.NoFilter,
   ): Promise<Array<NyaaModel>> {
     return await this.service.findAnime(name, category, filter);
@@ -21,7 +21,7 @@ export class NyaaSharedFramework {
 
   public async findLiterature(
     name: string,
-    category: NyaaLiteratureCategories = NyaaLiteratureCategories.All,
+    category: NyaaLiteratureCategories = NyaaLiteratureCategories.all,
     filter: NyaaFilters = NyaaFilters.NoFilter,
   ): Promise<Array<NyaaModel>> {
     return await this.service.findLiterature(name, category, filter);
